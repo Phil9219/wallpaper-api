@@ -9,7 +9,7 @@ export default function ImagePreview({ src, alt, author, id }) {
         onClick={() => {
           let favorites = null;
           try {
-            favorites = JSON.parse(localStorage.getItem("favorites"));
+            favorites = JSON.parse(localStorage.getItem("favorites")) || [];
           } catch (error) {
             console.error(error);
             favorites = [];
